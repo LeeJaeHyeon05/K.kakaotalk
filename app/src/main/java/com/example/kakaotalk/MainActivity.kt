@@ -2,7 +2,10 @@ package com.example.kakaotalk
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import com.example.kakaotalk.bottom_Fragment.OmenuFragment
+import com.example.kakaotalk.bottom_Fragment.PersonFragment
+import com.example.kakaotalk.bottom_Fragment.SearchFragment
+import com.example.kakaotalk.bottom_Fragment.TalkFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
