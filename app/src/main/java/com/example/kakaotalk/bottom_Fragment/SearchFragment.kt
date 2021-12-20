@@ -1,4 +1,4 @@
-package com.example.kakaotalk
+package com.example.kakaotalk.bottom_Fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -6,14 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kakaotalk.R
 
-class OmenuFragment: Fragment() {
+class SearchFragment: Fragment() {
 
     companion object {
         const val TAG: String = "로그"
 
-        fun newInstance() : OmenuFragment {
-            return OmenuFragment()
+        fun newInstance() : SearchFragment {
+            return SearchFragment()
         }
     }
 
@@ -32,7 +33,7 @@ class OmenuFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_o_menu, container, false)
+        val view = inflater.inflate(R.layout.fragment_search, container, false)
 
         return view
 

@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml" value="0.3030769230769231" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/drawable/rounded_corner.xml" value="0.3030769230769231" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/activity_main.xml" value="0.22448979591836735" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/activity_splash.xml" value="0.3177083333333333" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/fragment_o_menu.xml" value="0.1" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/fragment_person.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/fragment_person.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/fragment_talk.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/person_item_list.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/layout/profil_item_list.xml" value="0.22" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/kakaotalk/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>
