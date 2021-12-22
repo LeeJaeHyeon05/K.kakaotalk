@@ -15,7 +15,6 @@ import com.example.kakaotalk.person_activity.profileItems
 class PersonFragment: Fragment() {
 
     companion object {
-        const val TAG : String = "로그"
 
         fun newInstance() : PersonFragment {
             return PersonFragment()
@@ -35,7 +34,9 @@ class PersonFragment: Fragment() {
     ): View? {
         mBinding = FragmentPersonBinding.inflate(inflater, container, false)
 
-        val myLayoutManager = LinearLayoutManager(requireContext())
+        spaceDecoration()
+
+        val myLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.profileRecyclerView.layoutManager = myLayoutManager
 
         val data = ArrayList<profileItems>()
@@ -57,6 +58,10 @@ class PersonFragment: Fragment() {
     override fun onDestroy() {
         mBinding = null
         super.onDestroy()
+    }
+    private fun spaceDecoration() {
+        val spaceDecoration = profileAdapter.HorizontalSpaceItemDecoration(20)
+        binding.profileRecyclerView.addItemDecoration(spaceDecoration)
     }
 
 }
