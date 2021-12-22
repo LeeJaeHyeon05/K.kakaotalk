@@ -1,5 +1,6 @@
 package com.example.kakaotalk.person_activity
 
+import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,17 @@ class profileAdapter(private val mList: ArrayList<profileItems>) : RecyclerView.
     class ViewHoler(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageButton: ImageButton = itemView.findViewById(R.id.rv_button)
         val textView: TextView = itemView.findViewById(R.id.rv_textView)
+    }
+
+    class HorizontalSpaceItemDecoration(private val horizontalSpaceItemDecoration: Int) : RecyclerView.ItemDecoration() {
+        override fun getItemOffsets(
+            outRect: Rect,
+            view: View,
+            parent: RecyclerView,
+            state: RecyclerView.State
+        ) {
+            outRect.right = horizontalSpaceItemDecoration
+        }
     }
 
 
