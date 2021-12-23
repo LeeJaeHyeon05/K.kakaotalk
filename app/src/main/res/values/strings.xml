@@ -4,4 +4,6 @@
     <string name="myName">이재현</string>
     <string name="upDateFriends">업데이트한 친구</string>
     <string name="textChaanel">채널</string>
+
+    <string name="desText">카카오톡 클론 코딩</string>
 </resources>

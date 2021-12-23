@@ -4,13 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kakaotalk.R
 import com.example.kakaotalk.databinding.FragmentPersonBinding
-import com.example.kakaotalk.person_activity.profileAdapter
+import com.example.kakaotalk.person_activity.mainProfileAdpater
+import com.example.kakaotalk.person_activity.mainProfileItems
+import com.example.kakaotalk.person_activity.upDateProfileAdapter
 
-import com.example.kakaotalk.person_activity.profileItems
+import com.example.kakaotalk.person_activity.upDateProfileItems
 
 class PersonFragment: Fragment() {
 
@@ -37,31 +41,50 @@ class PersonFragment: Fragment() {
         spaceDecoration()
 
         val myLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.profileRecyclerView.layoutManager = myLayoutManager
+        binding.upDateProfileRecyclerView.layoutManager = myLayoutManager
 
-        val data = ArrayList<profileItems>()
+        val myLayoutManager2 = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.profileRecyclerView.layoutManager = myLayoutManager2
 
-        binding.profileRecyclerView.run {
-            adapter = profileAdapter(data)
+        val data = ArrayList<upDateProfileItems>()
+        val mainData = ArrayList<mainProfileItems>()
+
+        binding.upDateProfileRecyclerView.run {
+            adapter = upDateProfileAdapter(data)
             layoutManager = myLayoutManager
+        }
+        binding.profileRecyclerView.run {
+            adapter = mainProfileAdpater(mainData)
+            layoutManager = myLayoutManager2
         }
 
         //업데이트 부분 리사이클러뷰
-        data.add(profileItems(R.drawable.profile, "1"))
-        data.add(profileItems(R.drawable.profile, "2"))
-        data.add(profileItems(R.drawable.profile, "3"))
-        data.add(profileItems(R.drawable.profile, "4"))
+        data.add(upDateProfileItems(R.drawable.profile, "1"))
+        data.add(upDateProfileItems(R.drawable.profile, "2"))
+        data.add(upDateProfileItems(R.drawable.profile, "3"))
+        data.add(upDateProfileItems(R.drawable.profile, "4"))
+
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+        mainData.add(mainProfileItems(R.drawable.profile, R.string.myName, R.string.desText))
+
 
         return binding.root
     }
+
 
     override fun onDestroy() {
         mBinding = null
         super.onDestroy()
     }
     private fun spaceDecoration() {
-        val spaceDecoration = profileAdapter.HorizontalSpaceItemDecoration(20)
-        binding.profileRecyclerView.addItemDecoration(spaceDecoration)
+        val spaceDecoration = upDateProfileAdapter.HorizontalSpaceItemDecoration(20)
+        binding.upDateProfileRecyclerView.addItemDecoration(spaceDecoration)
     }
 
 }
+
+
