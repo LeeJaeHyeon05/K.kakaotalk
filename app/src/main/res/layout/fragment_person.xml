@@ -8,6 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/friend"
             android:layout_width="wrap_content"
@@ -90,7 +91,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:text=""
+                    android:text="@string/myName"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -112,7 +113,7 @@
                     android:id="@+id/upDateCountText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="5dp"
                     android:text="@string/upDateFriends"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -120,13 +121,79 @@
 
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/profileRecyclerView"
+                    android:id="@+id/upDateProfileRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintTop_toBottomOf="@+id/upDateCountText" />
+
+                <View
+                    android:id="@+id/seperateView3"
+                    android:layout_width="400dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileRecyclerView" />
+
+                <TextView
+                    android:id="@+id/channelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/textChaanel"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/seperateView3" />
+
+                <Button
+                    android:id="@+id/channelButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:background="@color/noBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channelText" />
+
+                <ImageView
+                    android:id="@+id/channelImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile"
+                    app:layout_constraintBottom_toBottomOf="@+id/channelButton"
+                    app:layout_constraintStart_toStartOf="@+id/channelButton"
+                    app:layout_constraintTop_toTopOf="@+id/channelButton" />
+
+                <TextView
+                    android:id="@+id/channelText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/textChaanel"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/channelImageView"
+                    app:layout_constraintStart_toEndOf="@+id/channelImageView"
+                    app:layout_constraintTop_toTopOf="@+id/channelImageView" />
+
+                <View
+                    android:id="@+id/seperateView4"
+                    android:layout_width="400dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/channelButton" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/profileRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
