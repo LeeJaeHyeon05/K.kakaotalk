@@ -31,6 +31,7 @@ class mainProfileAdpater(private val mList: ArrayList<mainProfileItems>) : Recyc
         val mImageImg: ImageView = itemView.findViewById(R.id.mainProfileImageView)
         val mNameTxt: TextView = itemView.findViewById(R.id.mainProfileTextView)
         val mDesTxt: TextView = itemView.findViewById(R.id.mainProfileDesTextView)
+
     }
 
 }

@@ -22,6 +22,7 @@ class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : R
 
         holder.imageButton.setImageResource(itemModel.upDateImage)
         holder.textView.setText(itemModel.upDateText)
+        holder.countNum?.setText(itemCount)
     }
 
     override fun getItemCount(): Int {
@@ -31,6 +32,7 @@ class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : R
     class ViewHoler(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageButton: ImageButton = itemView.findViewById(R.id.rv_button)
         val textView: TextView = itemView.findViewById(R.id.rv_textView)
+        val countNum: TextView? = itemView.findViewById(R.id.upDateCountNum)
     }
 
     class HorizontalSpaceItemDecoration(private val horizontalSpaceItemDecoration: Int) : RecyclerView.ItemDecoration() {
@@ -43,6 +45,4 @@ class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : R
             outRect.right = horizontalSpaceItemDecoration
         }
     }
-
-
 }
