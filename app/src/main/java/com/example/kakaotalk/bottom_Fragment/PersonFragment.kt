@@ -93,7 +93,6 @@ class PersonFragment: Fragment() {
         }
 
 
-
         return binding.root
     }
 
