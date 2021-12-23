@@ -9,8 +9,8 @@ import android.widget.TextView
 import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.kakaotalk.ChannelPage
 import com.example.kakaotalk.R
-import com.example.kakaotalk.databinding.ChannelPageBinding
 import com.example.kakaotalk.databinding.FragmentPersonBinding
 import com.example.kakaotalk.open_profile
 import com.example.kakaotalk.person_activity.mainProfileAdpater
@@ -84,7 +84,7 @@ class PersonFragment: Fragment() {
 
 
         binding.channelButton.setOnClickListener {
-            val intent = Intent(context, ChannelPageBinding::class.java)
+            val intent = Intent(context, ChannelPage::class.java)
             startActivity(intent)
         }
         binding.mainPersonProfile.setOnClickListener {
