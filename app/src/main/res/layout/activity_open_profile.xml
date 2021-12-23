@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".open_profile">
+
+    <View
+        android:id="@+id/profileView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profileBackgroundColor" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/noBackground"
+        android:drawableRight="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/starButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/noBackground"
+        android:drawableRight="@drawable/ic_baseline_star_border_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/chatButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/noBackground"
+        android:src="@drawable/ic_baseline_chat_bubble_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/chatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chatText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/chatButton"
+        app:layout_constraintStart_toStartOf="@+id/chatButton"
+        app:layout_constraintTop_toBottomOf="@+id/chatButton" />
+
+    <ImageButton
+        android:id="@+id/voiceTalkButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:background="@color/noBackground"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="@+id/chatButton"
+        app:layout_constraintStart_toEndOf="@+id/chatButton"
+        app:layout_constraintTop_toTopOf="@id/chatButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vocieText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/voiceTalkButton"
+        app:layout_constraintStart_toStartOf="@+id/voiceTalkButton"
+        app:layout_constraintTop_toBottomOf="@+id/voiceTalkButton" />
+
+    <ImageButton
+        android:id="@+id/faceTalkButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="50dp"
+        android:background="@color/noBackground"
+        android:src="@drawable/ic_baseline_videocam_24"
+        app:layout_constraintBottom_toBottomOf="@+id/voiceTalkButton"
+        app:layout_constraintStart_toEndOf="@+id/voiceTalkButton"
+        app:layout_constraintTop_toTopOf="@id/voiceTalkButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/faceTalkText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/faceTalkButton"
+        app:layout_constraintStart_toStartOf="@+id/faceTalkButton"
+        app:layout_constraintTop_toBottomOf="@+id/faceTalkButton" />
+
+    <TextView
+        android:id="@+id/whiteSeperateView"
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/voiceTalkButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:background="@drawable/rounded_corner"
+        android:id="@+id/openProfileImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSeperateView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="70dp"/>
+
+    <TextView
+        android:id="@+id/openProfileText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myName"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/openProfileImg"
+        app:layout_constraintStart_toStartOf="@+id/openProfileImg"
+        app:layout_constraintEnd_toEndOf="@id/openProfileImg"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

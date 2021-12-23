@@ -1,5 +1,6 @@
 package com.example.kakaotalk.person_activity
 
+import android.content.Intent
 import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +9,9 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kakaotalk.R
+import com.example.kakaotalk.databinding.ActivityOpenProfileBinding
+import com.example.kakaotalk.databinding.UpDateProfileViewPagerBinding
+import com.example.kakaotalk.open_profile
 
 class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : RecyclerView.Adapter<upDateProfileAdapter.ViewHoler>() {
 
@@ -21,6 +25,11 @@ class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : R
         val itemModel = mList[position]
 
         holder.imageButton.setImageResource(itemModel.upDateImage)
+        holder.imageButton.setOnClickListener {
+            val intent = Intent(it.context, open_profile::class.java)
+            it.context.startActivities(arrayOf(intent))
+        }
+
         holder.textView.setText(itemModel.upDateText)
         holder.countNum?.setText(itemCount)
     }
