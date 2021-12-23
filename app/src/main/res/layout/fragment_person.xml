@@ -137,7 +137,7 @@
                     android:background="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/profileRecyclerView" />
+                    app:layout_constraintTop_toBottomOf="@+id/upDateProfileRecyclerView" />
 
                 <TextView
                     android:id="@+id/channelText"
@@ -191,8 +191,13 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/profileRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/seperateView4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"/>
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

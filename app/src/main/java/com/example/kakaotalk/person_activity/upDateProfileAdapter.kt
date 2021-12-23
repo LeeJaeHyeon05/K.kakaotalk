@@ -9,15 +9,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kakaotalk.R
 
-class profileAdapter(private val mList: ArrayList<profileItems>) : RecyclerView.Adapter<profileAdapter.ViewHoler>() {
+class upDateProfileAdapter(private val mList: ArrayList<upDateProfileItems>) : RecyclerView.Adapter<upDateProfileAdapter.ViewHoler>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): profileAdapter.ViewHoler {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): upDateProfileAdapter.ViewHoler {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.profil_item_list, parent, false)
         return  ViewHoler(view)
     }
 
-    override fun onBindViewHolder(holder: profileAdapter.ViewHoler, position: Int) {
+    override fun onBindViewHolder(holder: upDateProfileAdapter.ViewHoler, position: Int) {
         val itemModel = mList[position]
 
         holder.imageButton.setImageResource(itemModel.upDateImage)
