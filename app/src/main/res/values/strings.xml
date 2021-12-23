@@ -6,4 +6,7 @@
     <string name="textChaanel">채널</string>
 
     <string name="desText">카카오톡 클론 코딩</string>
+    <string name="chatText">1:1 채팅</string>
+    <string name="vocieText">보이스톡</string>
+    <string name="faceTalkText">페이스톡</string>
 </resources>

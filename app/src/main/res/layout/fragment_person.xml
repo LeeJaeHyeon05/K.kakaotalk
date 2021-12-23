@@ -118,11 +118,12 @@
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/seperateView2" />
+
                 <TextView
                     android:id="@+id/upDateCountNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6"
+                    android:text=""
                     app:layout_constraintStart_toEndOf="@+id/upDateCountText"
                     app:layout_constraintBottom_toBottomOf="@+id/upDateCountText"
                     app:layout_constraintTop_toTopOf="@+id/upDateCountText"
@@ -165,7 +166,8 @@
                     android:background="@color/noBackground"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/channelText" />
+                    app:layout_constraintTop_toBottomOf="@+id/channelText"
+                    android:drawableRight="@drawable/ic_baseline_arrow_right_24"/>
 
                 <ImageView
                     android:id="@+id/channelImageView"

@@ -10,21 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kakaotalk">
         <activity
+            android:name=".upDateProfileViewPager"
+            android:exported="false" />
+        <activity
+            android:name=".open_profile"
+            android:exported="false" />
+        <activity
             android:name=".activity_splash"
-            android:theme="@style/Splash"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
