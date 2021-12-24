@@ -3,6 +3,9 @@ package com.example.kakaotalk
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.TextView
 
 class open_profile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,5 +17,9 @@ class open_profile : AppCompatActivity() {
             onBackPressed()
 
         }
+
+
+
+
     }
 }
